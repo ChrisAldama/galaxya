@@ -5,6 +5,6 @@
 struct Scene;
 
 namespace Event {
-  bool loop(const Scene &scene);
+  bool loop(Scene &scene);
   using Handler = std::function<void(const SDL_Event &e)>;
 }

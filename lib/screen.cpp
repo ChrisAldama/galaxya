@@ -48,7 +48,6 @@ void Screen::render(const Scene &scene)
       sprite.width,
       sprite.height
     };
-    printf("X: %i\n", sprite.x);
     SDL_RenderCopy(
       _renderer.get(),
       sprite.texture.get(),

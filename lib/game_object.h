@@ -1,7 +1,12 @@
+#pragma once
+
 #include "sprite.h"
 #include "event_loop.h"
 
-struct GameObject {
+class GameObject {
+public:
   Sprite sprite;
-  Event::Handler handler;
+  virtual void handler(const SDL_Event &e) {};
+
+  GameObject() {};
 };

@@ -9,3 +9,8 @@ void Scene::clear()
 {
   objects.clear();
 }
+
+SceneP Scene::factory()
+{
+  return SceneP(new Scene());
+}

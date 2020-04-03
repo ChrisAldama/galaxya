@@ -11,6 +11,11 @@ y(0)
   }
 }
 
+Sprite::Sprite()
+{
+
+}
+
 bool Sprite::load(const std::string &path, const Renderer &renderer)
 {
   auto *raw_surface = IMG_Load(path.c_str());

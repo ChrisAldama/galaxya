@@ -2,12 +2,12 @@
 #include "SDL2/SDL.h"
 #include "scene.h"
 
-bool Event::loop(const Scene &scene)
+bool Event::loop(Scene &scene)
 {
   static SDL_Event e;
   while(SDL_PollEvent(&e)) {
     if (e.type == SDL_QUIT) return false;
-    for (const auto &obj : scene.objects) {
+    for (GameObject &obj : scene.objects) {
       obj.handler(e);
     }
   }

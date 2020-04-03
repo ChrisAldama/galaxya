@@ -20,6 +20,7 @@ using Surface = std::unique_ptr<SDL_Surface, SurfaceDeleter>;
 struct Sprite {
   bool load(const std::string &path, const Renderer &renderer);
   Sprite(const std::string &path, const Renderer &renderer);
+  Sprite();
 
   int width;
   int height;
