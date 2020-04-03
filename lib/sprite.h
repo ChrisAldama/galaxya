@@ -17,18 +17,13 @@ struct SurfaceDeleter {
 using Texture = std::unique_ptr<SDL_Texture, TextureDeleter>;
 using Surface = std::unique_ptr<SDL_Surface, SurfaceDeleter>;
 
-class Sprite {
-  public:
-
+struct Sprite {
   bool load(const std::string &path, const Renderer &renderer);
-  void render(const Renderer &renderer);
   Sprite(const std::string &path, const Renderer &renderer);
 
   int width;
   int height;
   int x;
   int y;
-
-  private:
   Texture texture;
 };

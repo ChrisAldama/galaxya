@@ -34,9 +34,3 @@ bool Sprite::load(const std::string &path, const Renderer &renderer)
   height = surface->h;
   return true;
 }
-
-void Sprite::render(const Renderer &renderer)
-{
-  SDL_Rect rect = { x, y, width, height };
-  SDL_RenderCopy(renderer.get(), texture.get(), nullptr, &rect);
-}
