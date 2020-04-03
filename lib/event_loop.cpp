@@ -7,8 +7,8 @@ bool Event::loop(Scene &scene)
   static SDL_Event e;
   while(SDL_PollEvent(&e)) {
     if (e.type == SDL_QUIT) return false;
-    for (GameObject &obj : scene.objects) {
-      obj.handler(e);
+    for (GameObjectP &obj : scene.objects) {
+      obj->handler(e);
     }
   }
   return true;

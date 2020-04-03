@@ -41,7 +41,7 @@ void Screen::update()
 void Screen::render(const Scene &scene)
 {
   for (const auto &obj: scene.objects) {
-    const auto& sprite = obj.sprite;
+    const auto& sprite = obj->sprite;
     const SDL_Rect rect = {
       sprite.x,
       sprite.y,

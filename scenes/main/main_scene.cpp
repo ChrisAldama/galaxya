@@ -2,7 +2,8 @@
 #include "ship.h"
 
 MainScene::MainScene() {
-  addObject(Ship());
+  GameObjectP ship(new Ship());
+  addObject(ship);
 }
 
 SceneP MainScene::factory() {

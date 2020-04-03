@@ -10,3 +10,5 @@ public:
 
   GameObject() {};
 };
+
+using GameObjectP = std::unique_ptr<GameObject>;

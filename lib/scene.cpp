@@ -1,6 +1,6 @@
 #include "scene.h"
 
-void Scene::addObject(GameObject &&object)
+void Scene::addObject(GameObjectP &object)
 {
   objects.push_back(std::move(object));
 }

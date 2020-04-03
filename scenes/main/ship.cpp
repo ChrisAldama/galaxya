@@ -17,12 +17,10 @@ void Ship::handler(const SDL_Event &e)
   switch (e.key.keysym.sym)
   {
   case SDLK_LEFT:
-    printf("L %i\n", this->sprite.x);
-    this->sprite.x--;
+    this->sprite.x-=10;
     break;
   case SDLK_RIGHT:
-    printf("R %i\n", this->sprite.x);
-    this->sprite.x++;
+    this->sprite.x+=10;
     break;
   default:
     break;

@@ -10,8 +10,8 @@ using SceneP = std::unique_ptr<Scene>;
 struct Scene
 {
   void clear();
-  void addObject(GameObject &&object);
-  std::vector<GameObject> objects;
+  void addObject(GameObjectP &object);
+  std::vector<GameObjectP> objects;
 
   static SceneP factory();
 };
